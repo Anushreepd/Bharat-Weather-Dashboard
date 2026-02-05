@@ -15,9 +15,20 @@ body {
   padding: 20px;
 }
 
+.dashboard-container {
+  max-width: 600px;
+  margin: 0px auto;
+  padding: 30px 20px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+
 h1 {
   color: #2c3e50;
   margin-bottom: 30px;
+  margin-top: 0px;
 }
 
 .selector-container {
@@ -36,19 +47,43 @@ h1 {
 .weather-card {
   max-width: 400px;
   margin: 0 auto;
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+  border-radius: 16px;
+  padding: 30px 20px;
+  color: black;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .weather-card h2 {
-  margin-top: 0;
-  color: #34495e;
+  margin: 0;
+  font-size: 24px;
 }
 
-.weather-card p {
-  color: #666;
+.capital {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.weather-icon {
+  width: 120px;
+  height: 120px;
+}
+
+.temp {
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+.condition {
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.extra-info {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
 }
 
 .search-label{
