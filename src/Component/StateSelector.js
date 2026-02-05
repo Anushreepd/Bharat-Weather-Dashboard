@@ -1,7 +1,4 @@
-import React from 'react'
-import { states } from '../Data/states'
-
-const StateSelector = ({selectState, onChange}) => {
+const StateSelector = ({states, selectState, onChange}) => {
   return (
     <div className="selector-container">
         <label className='search-label'>Search for State:</label>
@@ -12,7 +9,7 @@ const StateSelector = ({selectState, onChange}) => {
         >
             <option value=""> --Select State--</option>
             {states.map((state) => (
-                <option key = {state.name} value = {state.name}>{state.name}</option>
+                <option key = {state.iso2} value = {state.iso2}>{state.name}</option>
             ))}
         </select>
       

@@ -1,0 +1,11 @@
+.footer {
+  padding: 20px 10px;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+
+.quote {
+  font-style: italic;
+  margin-bottom: 8px;
+}
