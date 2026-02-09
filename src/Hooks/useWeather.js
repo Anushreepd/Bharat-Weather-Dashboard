@@ -24,7 +24,7 @@ export function useWeather(city) {
         console.log("res", res);
 
         if (!res.ok) {
-          throw new Error("Failed to fetch weather");
+          throw new Error("Sorry! Currently Weather data for this city is unavailable");
         }
 
         const data = await res.json();

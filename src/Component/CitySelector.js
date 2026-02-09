@@ -6,6 +6,7 @@ function CitySelector({ cities, selectedCity, onChange }) {
       className="state-select"
       value={selectedCity}
       onChange={onChange}
+      disabled={!cities.length}
     >
       <option value="">--Select City--</option>
 

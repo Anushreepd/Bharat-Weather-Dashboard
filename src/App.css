@@ -1,3 +1,54 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+/* Toggle Switch */
+
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.theme-switch input:checked + .slider {
+  background-color: #4f46e5;
+}
+
+.theme-switch input:checked + .slider::before {
+  transform: translateX(22px);
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -18,7 +69,7 @@ body {
 }
 
 .dashboard-container {
-  max-width: 600px;
+  max-width: 900px;
   margin: 0px auto;
   padding: 30px 20px;
   background: #ffffff;
@@ -28,9 +79,10 @@ body {
 }
 
 h1 {
-  color: #2c3e50;
+  color: #ffffff;
   margin-bottom: 30px;
-  margin-top: 0px;
+  margin: 0px;
+  padding-right: 10px;
 }
 
 .selector-container {
@@ -90,4 +142,75 @@ h1 {
 
 .search-label {
   margin-right: 2px;
+}
+
+.sunny {
+  background: linear-gradient(135deg, #facc15, #f97316);
+}
+
+.cloudy {
+  background: linear-gradient(135deg, #94a3b8, #64748b);
+}
+
+.rainy {
+  background: linear-gradient(135deg, #38bdf8, #1e3a8a);
+}
+
+.snowy {
+  background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+}
+
+.weather-card {
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.error-text {
+  color: red;
+  margin-top: 12px;
+  max-width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.dashboard-container.light {
+  background: #ffffff;
+  color: #000;
+}
+
+.dashboard-container.dark {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+/* Weather card adapts automatically */
+.dashboard-container.dark .weather-card {
+  background: #526a92;
+  color: #ffffff;
+}
+
+.dashboard-container.light .weather-card {
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+  color: #000;
+}
+
+.dashboard-container.light h1 {
+  color: #000;
+}
+
+.dashboard-container.dark h1 {
+  color: #fff;
 }
